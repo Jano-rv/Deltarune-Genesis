@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deltArune GENESIS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button
+      id="btn-lang"
+      class="btn-lang"
+      title="Cambiar Idioma / Change Language">
+      EN
+    </button>
+
+    <div class="hero-container">
+      <h1 class="titulo-superior">deltArune GENESIS</h1>
+
+      <div class="contenedor-dialogo">
+        <img
+          src="assets/images/dialogo.png"
+          alt="Cuadro de Diálogo"
+          class="img-dialogo"
+        />
+      </div>
+    </div>
+
+    <section class="caja-retro contenedor-devlog">
+      <h2 class="titulo-seccion" data-i18n="devlog_title">
+        ESTADO DEL PROYECTO
+      </h2>
+      <p class="texto-retro" data-i18n="devlog_text">
+        Estamos adaptando Deltarune al hardware real de la Sega Genesis / Mega
+        Drive usando C y SGDK.
+      </p>
+      <ul class="lista-retro">
+        <li data-i18n="devlog_li1">
+          Party System: Kris, Ralsei y Susie con seguimiento de movimiento.
+        </li>
+        <li data-i18n="devlog_li2">
+          Y-Sorting: Profundidad y ordenamiento de sprites en tiempo real.
+        </li>
+        <li data-i18n="devlog_li3">
+          Audio YM2612: Música chiptune 16-bit procesada con el driver XGM.
+        </li>
+        <li data-i18n="devlog_li4">
+          Próximamente: Sistema de diálogos e interfaz de menú.
+        </li>
+      </ul>
+    </section>
+
+    <section class="seccion-video">
+      <div class="marco-video">
+        <video id="gameplay-video" controls poster="assets/images/portada.png">
+          <source src="assets/1024(1).mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </section>
+
+    <section class="caja-retro contenedor-tecnicas">
+      <h2 class="titulo-seccion" data-i18n="specs_title">
+        ESPECIFICACIONES TÉCNICAS
+      </h2>
+      <p class="texto-retro" data-i18n="specs_text">
+        Diseñado para exprimir al máximo las capacidades de los 16 bits:
+      </p>
+      <ul class="lista-retro">
+        <li data-i18n="specs_li1">
+          Resolución nativa: 320x224 píxeles optimizada para pantallas retro.
+        </li>
+        <li data-i18n="specs_li2">
+          Paleta de colores: 64 colores simultáneos en pantalla de una paleta de
+          512.
+        </li>
+        <li data-i18n="specs_li3">
+          Almacenamiento: La Genesis podía almacenar hasta unos 12 a 16 megas
+          antes de crashear, intentemos.
+        </li>
+        <li data-i18n="specs_li4">
+          Procesamiento de Audio: Driver XGM para síntesis FM en chips YM2612 y
+          PSG.
+        </li>
+      </ul>
+    </section>
+
+    <section class="caja-retro contenedor-roadmap">
+      <h2 class="titulo-seccion" data-i18n="roadmap_title">
+        HOJA DE RUTA (ROADMAP)
+      </h2>
+      <p class="texto-retro" data-i18n="roadmap_text">
+        Las etapas clave planificadas para completar el desarrollo:
+      </p>
+      <ul class="lista-retro">
+        <li data-i18n="roadmap_li1">
+          Fase 1: Motores base, tiles de mapas y movimiento con party system
+          (Completado).
+        </li>
+        <li data-i18n="roadmap_li2">
+          Fase 2: Sistema de combate por turnos, diálogos e interfaz de menú (En
+          desarrollo).
+        </li>
+        <li data-i18n="roadmap_li3">
+          Fase 3: Implementación completa del Capítulo 1 y optimización de audio
+          FM/Sega CD (Próximamente).
+        </li>
+      </ul>
+    </section>
+
+    <section class="caja-retro contenedor-faq">
+      <h2 class="titulo-seccion" data-i18n="faq_title">
+        PREGUNTAS FRECUENTES (FAQ)
+      </h2>
+
+      <div class="faq-item">
+        <h3 class="faq-pregunta" data-i18n="faq_q1">
+          ¿Funcionará en consola real?
+        </h3>
+        <p class="faq-respuesta" data-i18n="faq_a1">
+          Dentro de lo posible, sí. De todas formas, teniendo en cuenta la
+          inmensa cantidad de canciones de la banda sonora original de Toby Fox,
+          es muy probable que terminemos apuntando a <strong>Sega CD</strong>.
+          Básicamente es la misma arquitectura pero con una capacidad de
+          almacenamiento gigante, lo que incluso nos permitiría meter todos los
+          capítulos en un único CD sin tener que recurrir a cartuchos con
+          tecnología Lock-On para transferir guardados.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-pregunta" data-i18n="faq_q2">
+          ¿Qué emulador recomiendan?
+        </h3>
+        <p class="faq-respuesta" data-i18n="faq_a2">
+          Para mayor comodidad recomendamos usar <strong>RetroArch</strong> con
+          el núcleo <strong>Genesis Plus GX</strong>, siendo una opción super
+          práctica y sólida. Si buscas máxima precisión con el hardware real,
+          <strong>BlastEm</strong> es una excelente alternativa.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-pregunta" data-i18n="faq_q3">
+          ¿El proyecto será Open Source / Código Abierto?
+        </h3>
+        <p class="faq-respuesta" data-i18n="faq_a3">
+          ¡Sí! Una vez completado el Capítulo 1, se liberará públicamente la
+          ROM, todo el código fuente y los assets. El objetivo es que cualquier
+          desarrollador o fan pueda usar este demake como base de aprendizaje,
+          crear sus propios mods, o extraer mecánicas independientes para sus
+          propios proyectos de Sega Genesis (como el sistema de
+          party/seguimiento de Kris, el cuadro de diálogos, HUD, etc.).
+        </p>
+      </div>
+    </section>
+
+    <section class="caja-retro contenedor-colaborar">
+      <h2 class="titulo-seccion" data-i18n="team_title">ÚNETE AL EQUIPO</h2>
+      <p class="texto-retro" data-i18n="team_text">
+        Buscamos personas motivadas con ganas de ayudar a hacer este demake
+        realidad:
+      </p>
+      <div class="grilla-roles">
+        <div class="rol-item" data-i18n="team_r1">Pixel Artists</div>
+        <div class="rol-item" data-i18n="team_r2">Compositores FM</div>
+        <div class="rol-item" data-i18n="team_r3">Programadores SGDK</div>
+      </div>
+    </section>
+
+    <section class="caja-retro contenedor-galeria-abajo">
+      <h2 class="titulo-seccion" data-i18n="gallery_title">
+        GALERÍA Y COMPARATIVA
+      </h2>
+      <p class="texto-retro" data-i18n="gallery_text">
+        Un vistazo al proceso de traducción visual del estilo moderno al entorno
+        clásico de 16-bit:
+      </p>
+      <div class="galeria-grid">
+        <div class="galeria-item">
+          <img
+            src="assets/images/comparacion_1.png"
+            alt="Sprites y Y-Sorting"
+          />
+          <span data-i18n="gallery_item1">Gestión de Sprites y Y-Sorting</span>
+        </div>
+        <div class="galeria-item">
+          <img
+            src="assets/images/comparacion_2.png"
+            alt="Tiles de Castle Town"
+          />
+          <span data-i18n="gallery_item2">Diseño de Tiles en Castle Town</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="contenedor-redes">
+      <div class="contenedor-gif-final">
+        <img
+          src="assets/images/final.gif"
+          alt="Animación Central"
+          class="img-gif-final"
+        />
+      </div>
+
+      <div class="fila-principal-redes">
+        <a
+          href="https://www.deflemask.com/"
+          target="_blank"
+          class="enlace-red-grande"
+        >
+          <img
+            src="assets/images/deflemask.png"
+            alt="DefleMask Logo"
+            class="logo-red-grande"
+          />
+          <span>DefleMask</span>
+        </a>
+
+        <a
+          href="https://discord.gg/yFpZrxXrc"
+          target="_blank"
+          class="enlace-red-grande"
+        >
+          <img
+            src="assets/images/discord.png"
+            alt="Discord Logo"
+            class="logo-red-grande"
+          />
+          <span data-i18n="link_discord">Unirse al Discord</span>
+        </a>
+
+        <a
+          href="https://github.com/Stephane-D/SGDK"
+          target="_blank"
+          class="enlace-red-grande"
+        >
+          <img
+            src="assets/images/github.png"
+            alt="SGDK Logo"
+            class="logo-red-grande"
+          />
+          <span>SGDK GHub</span>
+        </a>
+      </div>
+
+      <div class="columna-inferior-redes">
+        <a
+          href="https://www.aseprite.org/"
+          target="_blank"
+          class="enlace-red-grande"
+        >
+          <img
+            src="assets/images/aseprite.png"
+            alt="Aseprite Logo"
+            class="logo-red-grande"
+          />
+          <span data-i18n="link_aseprite">Aseprite de paga</span>
+        </a>
+
+        <a
+          href="https://libresprite.github.io/"
+          target="_blank"
+          class="enlace-red-grande"
+        >
+          <img
+            src="assets/images/libresprite.png"
+            alt="LibreSprite Logo"
+            class="logo-red-grande"
+          />
+          <span data-i18n="link_libresprite">LibreSprite free</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="music-player">
+      <div class="player-cover-container">
+        <img
+          id="track-cover-1"
+          class="player-cover active"
+          src=""
+          alt="Carátula"
+        />
+        <img id="track-cover-2" class="player-cover" src="" alt="Carátula" />
+      </div>
+
+      <div class="player-details">
+        <div class="track-info-wrapper">
+          <div id="track-info-1" class="track-info active">
+            <span class="track-title">Can You Really Call This...</span>
+            <span class="track-artist">Soshu</span>
+          </div>
+          <div id="track-info-2" class="track-info">
+            <span class="track-title"></span>
+            <span class="track-artist"></span>
+          </div>
+        </div>
+
+        <div class="player-controls">
+          <button id="btn-prev" class="player-btn" title="Anterior">
+            &lt;&lt;
+          </button>
+          <button id="btn-play" class="player-btn" title="Reproducir/Pausar">
+            &gt;
+          </button>
+          <button id="btn-next" class="player-btn" title="Siguiente">
+            &gt;&gt;
+          </button>
+        </div>
+
+        <div class="volume-container">
+          <input
+            type="range"
+            id="volume-slider"
+            class="volume-slider"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.7"
+          />
+        </div>
+      </div>
+
+      <audio id="audio-element"></audio>
+    </div>
+
+    <img
+      id="arrow"
+      src="assets/images/arrow.png"
+      alt="Flecha"
+      class="scroll-arrow oculta"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>
