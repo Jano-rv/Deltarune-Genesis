@@ -20,6 +20,7 @@ html,
 body {
   width: 100%;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 body {
@@ -99,24 +100,24 @@ body {
 
 .marco-video {
   width: 100%;
-  max-width: 48rem;
+  max-width: 70rem;
   border: 4px solid #ffffff;
-  box-shadow: 8px 8px 0px #000;
   background-color: #000;
 }
 
-.marco-video video {
+.marco-video iframe {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
   display: block;
   outline: none;
 }
 
 .caja-retro {
-  max-width: 48rem;
+  max-width: 70rem;
   margin: 3.141592653589793rem auto 3.141592653589793rem auto;
   background-color: rgba(0, 0, 0, 0.85);
   border: 3px solid #ffffff;
-  box-shadow: 6px 6px 0px #000;
   padding: 1.5rem 2rem;
   color: #ffffff;
 }
@@ -134,6 +135,13 @@ body {
   margin-bottom: 2rem;
 }
 
+.estado-subtitulo {
+  color: #ffff00;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.5rem;
+  text-shadow: 2px 2px 0px #000;
+}
+
 .lista-retro {
   list-style: none;
   font-size: 1.2rem;
@@ -146,14 +154,14 @@ body {
 }
 
 /* ==========================================
-   GALERÍA INDEPENDIENTE (CUADRADO AZUL)
+   CENTRO DE DESARROLLO
    ========================================== */
 
 .contenedor-galeria-abajo {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 300rem;
+  top: 300.45rem;
 
   width: 100%;
   max-width: 96rem;
@@ -163,40 +171,60 @@ body {
   background-color: rgba(0, 0, 0, 0.85);
   border: 3px solid #ffffff;
   box-shadow: 6px 6px 0px #000;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 3rem 2rem;
   color: #ffffff;
   z-index: 10;
 }
 
-.galeria-grid {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+.devlog-timeline {
+  max-height: 22rem;
   margin-top: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.galeria-item {
-  background-color: #111;
+  padding: 0 1rem 0 1.5rem;
+  overflow-y: auto;
   border: 2px solid #00ffff;
-  padding: 1.2rem;
-  text-align: center;
-  flex: 1;
-  min-width: 280px;
+  background-color: #080808;
+  scrollbar-color: #00ffff #111111;
 }
 
-.galeria-item img {
-  width: 100%;
-  height: auto;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  margin-bottom: 0.8rem;
-  border: 1px solid #ffffff;
+.devlog-entry {
+  padding: 1.2rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
 }
 
-.galeria-item span {
-  font-size: 1.1rem;
+.devlog-entry:last-child {
+  border-bottom: none;
+}
+
+.devlog-entry time {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.devlog-date,
+.devlog-time,
+.devlog-version {
+  display: inline-block;
+}
+
+.devlog-date {
+  color: #ffff00;
+}
+
+.devlog-time {
+  color: #00ffff;
+}
+
+.devlog-version {
   color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.devlog-entry p {
+  color: #dddddd;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
 }
 
 /* ==========================================
@@ -501,6 +529,11 @@ body {
    ========================================== */
 
 @media (max-width: 768px) {
+  body {
+    background-image: url("assets/images/castle_town_mobile.png");
+    background-size: auto 42rem;
+  }
+
   .titulo-superior {
     font-size: 3rem;
     padding-top: 6rem;
@@ -518,27 +551,34 @@ body {
   }
 
   .caja-retro {
+    width: calc(100% - 2rem);
+    max-width: none;
     margin: 1.5rem 1rem 3rem 1rem;
     padding: 1rem;
+  }
+
+  .seccion-video {
+    margin: 2rem auto;
+  }
+
+  .texto-retro {
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .lista-retro {
+    line-height: 1.6;
   }
 
   .contenedor-galeria-abajo {
     position: relative;
     width: 90% !important;
     max-width: 100% !important;
+    min-height: auto;
     left: auto;
     transform: none;
     top: auto;
     margin: 2rem auto !important;
-  }
-
-  .galeria-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .galeria-item {
-    min-width: 100%;
   }
 
   .titulo-seccion {
@@ -562,6 +602,7 @@ body {
 
   .fila-principal-redes,
   .columna-inferior-redes {
+    display: flex;
     flex-direction: column;
     gap: 1.2rem;
     align-items: center;
@@ -576,7 +617,17 @@ body {
     width: 2.5rem;
   }
 
+  .contenedor-gif-final {
+    margin: 2rem auto 3rem;
+    padding: 0 1rem;
+  }
+
+  .img-gif-final {
+    width: min(28em, 100%);
+  }
+
   .music-player {
+    max-width: calc(100vw - 20px);
     bottom: 10px;
     left: 10px;
     padding: 6px 10px;
@@ -612,6 +663,30 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .titulo-superior {
+    font-size: 2.4rem;
+  }
+
+  .titulo-seccion {
+    font-size: 1.35rem;
+  }
+
+  .texto-retro,
+  .lista-retro,
+  .faq-respuesta {
+    font-size: 0.9rem;
+  }
+
+  .enlace-red-grande {
+    font-size: 1.25rem;
+  }
+
+  .track-info-wrapper {
+    width: 105px;
+  }
+}
+
 /* ==========================================
    GIF CENTRAL DECORATIVO (final.gif)
    ========================================== */
@@ -625,7 +700,7 @@ body {
 }
 
 .img-gif-final {
-  width: 28em;
+  width: min(28em, 100%);
   height: auto;
   image-rendering: pixelated;
   image-rendering: crisp-edges;

@@ -84,15 +84,19 @@ interactiveElements.forEach((el) => {
 const translations = {
   es: {
     devlog_title: "ESTADO DEL PROYECTO",
-    devlog_text:
-      "Estamos adaptando Deltarune al hardware real de la Sega Genesis / Mega Drive usando C y SGDK.",
-    devlog_li1:
-      "Party System: Kris, Ralsei y Susie con seguimiento de movimiento.",
-    devlog_li2:
-      "Y-Sorting: Profundidad y ordenamiento de sprites en tiempo real.",
-    devlog_li3:
-      "Audio YM2612: Música chiptune 16-bit procesada con el driver XGM.",
-    devlog_li4: "Próximamente: Sistema de diálogos e interfaz de menú.",
+    devlog_text: "Esto es lo que llevamos hasta ahora:",
+    devlog_done_title: "HECHO",
+    devlog_done_1: "Curva de velocidad (sprint).",
+    devlog_done_2: "Cadena de Ralsei y Susie.",
+    devlog_done_3: "Fuentes.",
+    devlog_done_4: "Animaciones.",
+    devlog_done_5: "Sistema de SFX y música.",
+    devlog_almost_title: "CASI TERMINADO",
+    devlog_almost_1: "Sistema de menú (20%).",
+    devlog_almost_2: "Sistema de diálogos (90%).",
+    devlog_todo_title: "POR HACER",
+    devlog_todo_1: "Sistema de combate.",
+    devlog_todo_2: "Todo el maldito juego.",
 
     specs_title: "ESPECIFICACIONES TÉCNICAS",
     specs_text:
@@ -133,11 +137,20 @@ const translations = {
     team_r2: "Compositores FM",
     team_r3: "Programadores SGDK",
 
-    gallery_title: "GALERÍA Y COMPARATIVA",
-    gallery_text:
-      "Un vistazo al proceso de traducción visual del estilo moderno al entorno clásico de 16-bit:",
-    gallery_item1: "Gestión de Sprites y Y-Sorting",
-    gallery_item2: "Diseño de Tiles en Castle Town",
+    devcenter_title: "CENTRO DE DESARROLLO",
+    devcenter_text: "Registro de los cambios y avances del proyecto:",
+    devcenter_entry1:
+      "Prototipo inicial: fondo azul, texto de prueba y movimiento básico de Kris.",
+    devcenter_entry2:
+      "Movimiento en ocho direcciones, cámara, fondo y animaciones de Kris implementados.",
+    devcenter_entry3:
+      "Sistema de cadena del grupo y aceleración progresiva al correr implementados.",
+    devcenter_entry4: "Sprites de Susie y Ralsei añadidos.",
+    devcenter_entry5:
+      "Sistemas de diálogo y menú implementados, con selección visual y animaciones. Pendiente: personajes, HUD de dinero, etiquetas y acciones de los botones.",
+    devcenter_entry6: "Efectos de sonido y personajes completados.",
+    devcenter_entry7:
+      "Reproducción simultánea de música y SFX; NPC de prueba, hitbox y sprite de diálogo implementados.",
 
     link_discord: "Unirse al Discord",
     link_aseprite: "Aseprite de paga",
@@ -145,13 +158,19 @@ const translations = {
   },
   en: {
     devlog_title: "PROJECT STATUS",
-    devlog_text:
-      "We are porting Deltarune to real Sega Genesis / Mega Drive hardware using C and SGDK.",
-    devlog_li1: "Party System: Kris, Ralsei, and Susie with motion tracking.",
-    devlog_li2: "Y-Sorting: Real-time sprite depth sorting.",
-    devlog_li3:
-      "YM2612 Audio: 16-bit chiptune music processed with the XGM driver.",
-    devlog_li4: "Coming Soon: Dialogue system and menu interface.",
+    devlog_text: "Here's what we've got so far:",
+    devlog_done_title: "DONE",
+    devlog_done_1: "Velocity curve (sprint).",
+    devlog_done_2: "Ralsei and Susie chain.",
+    devlog_done_3: "Fonts.",
+    devlog_done_4: "Animations.",
+    devlog_done_5: "SFX + music system.",
+    devlog_almost_title: "ALMOST FINISHED",
+    devlog_almost_1: "Menu system (20%).",
+    devlog_almost_2: "Dialogue system (90%).",
+    devlog_todo_title: "TO DO",
+    devlog_todo_1: "Battle system.",
+    devlog_todo_2: "The entire freaking game.",
 
     specs_title: "TECHNICAL SPECIFICATIONS",
     specs_text: "Designed to push 16-bit capabilities to their absolute limit:",
@@ -190,11 +209,20 @@ const translations = {
     team_r2: "FM Composers",
     team_r3: "SGDK Programmers",
 
-    gallery_title: "GALLERY & COMPARISON",
-    gallery_text:
-      "A glimpse into translating modern visuals into a classic 16-bit environment:",
-    gallery_item1: "Sprite Management & Y-Sorting",
-    gallery_item2: "Castle Town Tile Design",
+    devcenter_title: "DEVELOPMENT CENTER",
+    devcenter_text: "A log of the project's changes and progress:",
+    devcenter_entry1:
+      "Initial prototype: blue background, test text, and basic Kris movement.",
+    devcenter_entry2:
+      "Eight-direction movement, camera, background, and Kris animations implemented.",
+    devcenter_entry3:
+      "Party chain system and progressive running acceleration implemented.",
+    devcenter_entry4: "Susie and Ralsei sprites added.",
+    devcenter_entry5:
+      "Dialogue and menu systems implemented with visual selection and animations. Remaining: characters, money HUD, labels, and button actions.",
+    devcenter_entry6: "Sound effects and characters completed.",
+    devcenter_entry7:
+      "Simultaneous music and SFX playback; test NPC, hitbox, and dialogue sprite implemented.",
 
     link_discord: "Join Discord",
     link_aseprite: "Paid Aseprite",

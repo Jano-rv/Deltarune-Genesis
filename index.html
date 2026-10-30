@@ -31,31 +31,41 @@
         ESTADO DEL PROYECTO
       </h2>
       <p class="texto-retro" data-i18n="devlog_text">
-        Estamos adaptando Deltarune al hardware real de la Sega Genesis / Mega
-        Drive usando C y SGDK.
+        Esto es lo que llevamos hasta ahora:
       </p>
+      <h3 class="estado-subtitulo" data-i18n="devlog_done_title">HECHO</h3>
       <ul class="lista-retro">
-        <li data-i18n="devlog_li1">
-          Party System: Kris, Ralsei y Susie con seguimiento de movimiento.
-        </li>
-        <li data-i18n="devlog_li2">
-          Y-Sorting: Profundidad y ordenamiento de sprites en tiempo real.
-        </li>
-        <li data-i18n="devlog_li3">
-          Audio YM2612: Música chiptune 16-bit procesada con el driver XGM.
-        </li>
-        <li data-i18n="devlog_li4">
-          Próximamente: Sistema de diálogos e interfaz de menú.
-        </li>
+        <li data-i18n="devlog_done_1">Curva de velocidad (sprint).</li>
+        <li data-i18n="devlog_done_2">Cadena de Ralsei y Susie.</li>
+        <li data-i18n="devlog_done_3">Fuentes.</li>
+        <li data-i18n="devlog_done_4">Animaciones.</li>
+        <li data-i18n="devlog_done_5">Sistema de SFX y música.</li>
+      </ul>
+      <h3 class="estado-subtitulo" data-i18n="devlog_almost_title">
+        CASI TERMINADO
+      </h3>
+      <ul class="lista-retro">
+        <li data-i18n="devlog_almost_1">Sistema de menú (20%).</li>
+        <li data-i18n="devlog_almost_2">Sistema de diálogos (90%).</li>
+      </ul>
+      <h3 class="estado-subtitulo" data-i18n="devlog_todo_title">
+        POR HACER
+      </h3>
+      <ul class="lista-retro">
+        <li data-i18n="devlog_todo_1">Sistema de combate.</li>
+        <li data-i18n="devlog_todo_2">Todo el maldito juego.</li>
       </ul>
     </section>
 
     <section class="seccion-video">
       <div class="marco-video">
-        <video id="gameplay-video" controls poster="assets/images/portada.png">
-          <source src="assets/1024(1).mp4" type="video/mp4" />
-          Tu navegador no soporta la reproducción de video.
-        </video>
+        <iframe
+          src="https://www.youtube.com/embed/tp3eTdy_YDA"
+          title="Gameplay de Deltarune Genesis"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
       </div>
     </section>
 
@@ -169,28 +179,61 @@
     </section>
 
     <section class="caja-retro contenedor-galeria-abajo">
-      <h2 class="titulo-seccion" data-i18n="gallery_title">
-        GALERÍA Y COMPARATIVA
+      <h2 class="titulo-seccion" data-i18n="devcenter_title">
+        CENTRO DE DESARROLLO
       </h2>
-      <p class="texto-retro" data-i18n="gallery_text">
-        Un vistazo al proceso de traducción visual del estilo moderno al entorno
-        clásico de 16-bit:
+      <p class="texto-retro" data-i18n="devcenter_text">
+        Registro de los cambios y avances del proyecto:
       </p>
-      <div class="galeria-grid">
-        <div class="galeria-item">
-          <img
-            src="assets/images/comparacion_1.png"
-            alt="Sprites y Y-Sorting"
-          />
-          <span data-i18n="gallery_item1">Gestión de Sprites y Y-Sorting</span>
-        </div>
-        <div class="galeria-item">
-          <img
-            src="assets/images/comparacion_2.png"
-            alt="Tiles de Castle Town"
-          />
-          <span data-i18n="gallery_item2">Diseño de Tiles en Castle Town</span>
-        </div>
+      <div class="devlog-timeline">
+        <article class="devlog-entry">
+          <time><span class="devlog-date">18/10/26</span> · <span class="devlog-time">21:54</span> · <span class="devlog-version">v0.0.0.1</span></time>
+          <p data-i18n="devcenter_entry1">
+            Prototipo inicial: fondo azul, texto de prueba y movimiento básico
+            de Kris.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">23/10/26</span> · <span class="devlog-time">17:34</span> · <span class="devlog-version">v1.0.0.0</span></time>
+          <p data-i18n="devcenter_entry2">
+            Movimiento en ocho direcciones, cámara, fondo y animaciones de Kris
+            implementados.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">23/10/26</span> · <span class="devlog-time">19:41</span> · <span class="devlog-version">v1.0.0.1</span></time>
+          <p data-i18n="devcenter_entry3">
+            Sistema de cadena del grupo y aceleración progresiva al correr
+            implementados.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">24/10/26</span> · <span class="devlog-time">00:20</span> · <span class="devlog-version">v1.0.0.2</span></time>
+          <p data-i18n="devcenter_entry4">
+            Sprites de Susie y Ralsei añadidos.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">25/10/26</span> · <span class="devlog-time">19:55</span> · <span class="devlog-version">v1.0.1.0</span></time>
+          <p data-i18n="devcenter_entry5">
+            Sistemas de diálogo y menú implementados, con selección visual y
+            animaciones. Pendiente: personajes, HUD de dinero, etiquetas y
+            acciones de los botones.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">26/10/26</span> · <span class="devlog-time">23:46</span> · <span class="devlog-version">v1.0.1.1</span></time>
+          <p data-i18n="devcenter_entry6">
+            Efectos de sonido y personajes completados.
+          </p>
+        </article>
+        <article class="devlog-entry">
+          <time><span class="devlog-date">30/10/26</span> · <span class="devlog-time">09:49</span> · <span class="devlog-version">v1.0.1.2</span></time>
+          <p data-i18n="devcenter_entry7">
+            Reproducción simultánea de música y SFX; NPC de prueba, hitbox y
+            sprite de diálogo implementados.
+          </p>
+        </article>
       </div>
     </section>
 
