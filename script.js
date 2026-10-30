@@ -299,7 +299,7 @@ const playlist = [
     title: "Lost Girl",
     artist: "DeepFriedIdaho",
     src: "assets/music/deltarune - Lost Girl.mp3",
-    cover: "assets/music creators/DeepFriedIdaho.jpg",
+    cover: "assets/music creators/deepfriedidaho.jpg",
   },
 ];
 
