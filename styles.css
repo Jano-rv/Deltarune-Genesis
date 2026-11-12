@@ -23,6 +23,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  font-size: clamp(4px, 0.85vw, 32px);
+}
+
 body {
   background-image: url("assets/images/castle_town_bg.png");
   background-repeat: no-repeat;
@@ -35,7 +39,7 @@ body {
 }
 
 .hero-container {
-  perspective: 1000px;
+  perspective: 62.5rem;
   perspective-origin: center top;
   width: 100%;
 }
@@ -51,7 +55,7 @@ body {
   text-align: center;
   font-size: 8rem;
   padding-top: 18rem;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-shadow: 0.75rem 0.75rem 0px #000;
 
   transform-style: preserve-3d;
@@ -101,7 +105,7 @@ body {
 .marco-video {
   width: 100%;
   max-width: 70rem;
-  border: 4px solid #ffffff;
+  border: 0.25rem solid #ffffff;
   background-color: #000;
 }
 
@@ -117,7 +121,7 @@ body {
   max-width: 70rem;
   margin: 3.141592653589793rem auto 3.141592653589793rem auto;
   background-color: rgba(0, 0, 0, 0.85);
-  border: 3px solid #ffffff;
+  border: 0.1875rem solid #ffffff;
   padding: 1.5rem 2rem;
   color: #ffffff;
 }
@@ -126,7 +130,7 @@ body {
   font-size: 2.2rem;
   color: #ffff00;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 0px #000;
+  text-shadow: 0.125rem 0.125rem 0 #000;
 }
 
 .texto-retro {
@@ -139,7 +143,7 @@ body {
   color: #ffff00;
   font-size: 1.4rem;
   margin: 1.5rem 0 0.5rem;
-  text-shadow: 2px 2px 0px #000;
+  text-shadow: 0.125rem 0.125rem 0 #000;
 }
 
 .lista-retro {
@@ -161,16 +165,16 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 300.45rem;
+  top: var(--devcenter-top);
 
-  width: 100%;
+  width: 96%;
   max-width: 96rem;
-  min-height: 35rem;
+  height: 36rem;
 
   margin: 0 !important;
   background-color: rgba(0, 0, 0, 0.85);
-  border: 3px solid #ffffff;
-  box-shadow: 6px 6px 0px #000;
+  border: 0.1875rem solid #ffffff;
+  box-shadow: 0.375rem 0.375rem 0 #000;
   padding: 2.5rem 3rem 1.5rem;
   color: #ffffff;
   z-index: 10;
@@ -181,14 +185,14 @@ body {
   margin-top: 1.5rem;
   padding: 0 1rem 0 1.5rem;
   overflow-y: auto;
-  border: 2px solid #00ffff;
+  border: 0.125rem solid #00ffff;
   background-color: #080808;
   scrollbar-color: #00ffff #111111;
 }
 
 .devlog-entry {
   padding: 1.2rem 0;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+  border-bottom: 0.0625rem dashed rgba(255, 255, 255, 0.35);
 }
 
 .devlog-entry:last-child {
@@ -233,7 +237,7 @@ body {
 
 .faq-item {
   margin-bottom: 1.8rem;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  border-bottom: 0.0625rem dashed rgba(255, 255, 255, 0.2);
   padding-bottom: 1.2rem;
 }
 
@@ -247,7 +251,7 @@ body {
   font-size: 1.4rem;
   color: #00ffff;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 0px #000;
+  text-shadow: 0.0625rem 0.0625rem 0 #000;
 }
 
 .faq-pregunta::before {
@@ -275,13 +279,13 @@ body {
 
 .rol-item {
   background-color: #111;
-  border: 2px solid #00ffff;
+  border: 0.125rem solid #00ffff;
   padding: 0.6rem 1.2rem;
   font-size: 1.1rem;
   color: #ffffff;
   text-align: center;
   flex: 1;
-  min-width: 140px;
+  min-width: 8.75rem;
 }
 
 /* ==========================================
@@ -290,9 +294,9 @@ body {
 
 .contenedor-redes {
   position: absolute;
-  bottom: 3%;
+  top: var(--social-top);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 3rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -361,24 +365,24 @@ body {
 
 .music-player {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 1.25rem;
+  left: 1.25rem;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
   background-color: rgba(0, 0, 0, 0.85);
-  border: 3px solid #ffffff;
-  padding: 10px 14px;
+  border: 0.1875rem solid #ffffff;
+  padding: 0.625rem 0.875rem;
   z-index: 2000;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 0.25rem 0.25rem 0 #000;
   color: #ffffff;
 }
 
 .player-cover-container {
   position: relative;
-  width: 54px;
-  height: 54px;
-  border: 2px solid #00ffff;
+  width: 3.375rem;
+  height: 3.375rem;
+  border: 0.125rem solid #00ffff;
   background-color: #111;
   flex-shrink: 0;
   image-rendering: pixelated;
@@ -405,13 +409,14 @@ body {
 .player-details {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0.375rem;
+  width: 12.5rem;
 }
 
 .track-info-wrapper {
   position: relative;
   height: 2.3rem;
-  width: 200px;
+  width: 12.5rem;
   overflow: hidden;
 }
 
@@ -449,16 +454,16 @@ body {
 .player-controls {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .player-btn {
   background: transparent;
-  border: 2px solid #ffffff;
+  border: 0.125rem solid #ffffff;
   color: #ffffff;
   font-size: 1rem;
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -482,6 +487,7 @@ body {
 
 .volume-slider {
   width: 100%;
+  min-width: 0;
   accent-color: #00ffff;
   cursor: pointer;
 }
@@ -492,7 +498,7 @@ body {
 
 .scroll-arrow {
   position: fixed;
-  bottom: 20px;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   width: 12rem;
@@ -520,15 +526,15 @@ body {
     transform: translate(-50%, 0);
   }
   100% {
-    transform: translate(-50%, -15px);
+    transform: translate(-50%, -0.9375rem);
   }
 }
 
 /* ==========================================
-   AJUSTES PARA CELULAR (<= 768px)
+   AJUSTES PARA PANTALLAS ESTRECHAS (<= 480px)
    ========================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   body {
     background-image: url("assets/images/castle_town_mobile.png");
     background-size: auto 42rem;
@@ -571,14 +577,10 @@ body {
   }
 
   .contenedor-galeria-abajo {
-    position: relative;
     width: 90% !important;
     max-width: 100% !important;
     min-height: auto;
-    left: auto;
-    transform: none;
-    top: auto;
-    margin: 2rem auto !important;
+    margin: 0 !important;
   }
 
   .titulo-seccion {
@@ -591,11 +593,12 @@ body {
   }
 
   .contenedor-redes {
-    position: relative;
+    position: absolute;
+    top: var(--social-top);
     bottom: auto;
-    left: auto;
-    transform: none;
-    margin: 3rem auto 5rem auto;
+    left: 50%;
+    transform: translate(-50%, 3rem);
+    margin: 0;
     gap: 1.5rem;
     width: 100%;
   }
@@ -623,25 +626,29 @@ body {
   }
 
   .img-gif-final {
-    width: min(28em, 100%);
+    width: min(28rem, 100%);
   }
 
   .music-player {
-    max-width: calc(100vw - 20px);
-    bottom: 10px;
-    left: 10px;
-    padding: 6px 10px;
-    gap: 8px;
+    max-width: calc(100vw - 1.25rem);
+    bottom: 0.625rem;
+    left: 0.625rem;
+    padding: 0.375rem 0.625rem;
+    gap: 0.5rem;
   }
 
   .player-cover-container {
-    width: 42px;
-    height: 42px;
+    width: 2.625rem;
+    height: 2.625rem;
   }
 
   .track-info-wrapper {
-    width: 140px;
+    width: 8.75rem;
     height: 2rem;
+  }
+
+  .player-details {
+    width: 8.75rem;
   }
 
   .track-title {
@@ -653,13 +660,13 @@ body {
   }
 
   .player-btn {
-    width: 26px;
-    height: 26px;
+    width: 1.625rem;
+    height: 1.625rem;
     font-size: 0.8rem;
   }
 
   .scroll-arrow {
-    width: 36px;
+    width: 2.25rem;
   }
 }
 
@@ -683,7 +690,11 @@ body {
   }
 
   .track-info-wrapper {
-    width: 105px;
+    width: 6.5625rem;
+  }
+
+  .player-details {
+    width: 6.5625rem;
   }
 }
 
@@ -700,7 +711,7 @@ body {
 }
 
 .img-gif-final {
-  width: min(28em, 100%);
+  width: min(28rem, 100%);
   height: auto;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
@@ -712,16 +723,16 @@ body {
 
 .btn-lang {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 1.25rem;
+  right: 1.25rem;
   z-index: 2500;
   background-color: rgba(0, 0, 0, 0.85);
-  border: 3px solid #00ffff;
+  border: 0.1875rem solid #00ffff;
   color: #ffff00;
   font-size: 1.2rem;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 0.25rem 0.25rem 0 #000;
   transition:
     transform 0.15s ease,
     background-color 0.15s ease,

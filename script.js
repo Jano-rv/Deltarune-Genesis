@@ -3,13 +3,32 @@ function ajustarAlturaFondo() {
   img.src = "assets/images/castle_town_bg.png";
   img.onload = () => {
     const aspectRatio = img.naturalHeight / img.naturalWidth;
-    const altoCalculado = window.innerWidth * aspectRatio;
+    const altoCalculado = document.documentElement.clientWidth * aspectRatio;
     document.body.style.height = `${altoCalculado}px`;
+    ajustarPosicionCentroDesarrollo();
   };
 }
 
 window.addEventListener("load", ajustarAlturaFondo);
 window.addEventListener("resize", ajustarAlturaFondo);
+
+function ajustarPosicionCentroDesarrollo() {
+  const anchoContenido = document.documentElement.clientWidth;
+  const escalaRaiz = parseFloat(
+    getComputedStyle(document.documentElement).fontSize,
+  );
+  document.documentElement.style.setProperty(
+    "--devcenter-top",
+    `${anchoContenido * 2.578}px`,
+  );
+  document.documentElement.style.setProperty(
+    "--social-top",
+    `${anchoContenido * 2.893 - escalaRaiz * 3}px`,
+  );
+}
+
+window.addEventListener("load", ajustarPosicionCentroDesarrollo);
+window.addEventListener("resize", ajustarPosicionCentroDesarrollo);
 
 const arrow = document.getElementById("arrow");
 let timeoutInactividad;
@@ -407,9 +426,12 @@ const dialogo = document.querySelector(".contenedor-dialogo");
 
 window.addEventListener("scroll", () => {
   const scrolled = window.scrollY;
+  const scale = parseFloat(
+    getComputedStyle(document.documentElement).fontSize,
+  ) / 16;
 
-  if (scrolled < 800) {
-    const factor = scrolled / 800;
+  if (scrolled < 800 * scale) {
+    const factor = scrolled / (800 * scale);
     const translateZ = scrolled * -0.8;
     const translateY = scrolled * -0.4;
     const rotateX = scrolled * 0.08;
